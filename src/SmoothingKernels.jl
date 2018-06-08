@@ -1,7 +1,7 @@
 module SmoothingKernels
     include("kernels.jl")
 
-    kernels = [
+    kernels = Dict(
                 :uniform => uniform,
                 :triangular => triangular,
                 :epanechnikov => epanechnikov,
@@ -11,9 +11,9 @@ module SmoothingKernels
                 :gaussian => gaussian,
                 :cosine => cosine,
                 :logistic => logistic
-              ]
+              )
 
-    unnormalized_kernels = [
+    unnormalized_kernels = Dict(
                              :uniform => uniform_unnormalized,
                              :triangular => triangular_unnormalized,
                              :epanechnikov => epanechnikov_unnormalized,
@@ -23,5 +23,5 @@ module SmoothingKernels
                              :gaussian => gaussian_unnormalized,
                              :cosine => cosine_unnormalized,
                              :logistic => logistic_unnormalized
-                           ]
+                           )
 end
